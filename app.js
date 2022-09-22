@@ -6,7 +6,11 @@ let playAgain;
 
 const buttonClicked = document.querySelectorAll('button');
 
-console.log (dir.buttonClicked)
+buttonClicked.addEventListener('click', ()=> {
+    console.log(dir.buttonClicked);
+})
+
+
 
 
 
