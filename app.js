@@ -1,7 +1,22 @@
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const reset = document.querySelector('#reset');
 const resultsDisplay = document.querySelector('#results')
+const userScoreDisplay = document.querySelector('#playerScore')
+const computerScoreDisplay = document.querySelector('#computerScore')
+let userScore = 0;
+let computerScore = 0;
+
+
+function reset() {
+    userScore = 0;
+    computerScore = 0;
+    userScoreDisplay.textContent = userScore;
+    computerScoreDisplay.textContent = computerScore;
+    resultsDisplay.textContent = "Make your Choice"
+
+}
 
 function setUserChoice(choice) {
     return userChoice = choice;
@@ -14,15 +29,32 @@ function getRandomInt(max) {
 
 function displayWinner() {
     //output who won
+
     if (winner == "user") {
-        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice}, You won!`
+        resultsDisplay.textContent = `You chose ${userChoice} and the computer chose ${computerChoice}, You won!`
+        userScore += 1;
+        userScoreDisplay.textContent = userScore;
     }
     if (winner == "computer") {
-        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`
+        resultsDisplay.textContent = `You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`
+        computerScore += 1;
+        computerScoreDisplay.textContent = computerScore;
     }
 
     if (winner == "tie") {
-        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`
+        resultsDisplay.textContent = `You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`
+    }
+
+    if (userScore === 5 || computerScore === 5) {
+        rock.disabled = true;
+        paper.disabled = true;
+        scissors.disabled = true;
+        if (userScore > computerScore){
+            resultsDisplay.textContent = 'You won and saved the world!'
+        }
+        else {
+            resultsDisplay.textContent = 'You lost and the evil computer overlords will now rule.'
+        }
     }
 }
 
@@ -100,6 +132,10 @@ scissors.addEventListener('click', () => {
     getComputerChoice();
     getResults();
     displayWinner();
+})
+
+reset.addEventListener('click', () => {
+    reset();
 })
 
 
