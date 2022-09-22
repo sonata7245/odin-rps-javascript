@@ -14,6 +14,7 @@ const rock = document.querySelector('#rock')
 
 rock.addEventListener('click', (e) => {
     console.log(e);
+})
 //paper.addEventListener('click', setUserChoice('paper'));
 //scissors.addEventListener('click', seUserChoice('scissors'));
 
