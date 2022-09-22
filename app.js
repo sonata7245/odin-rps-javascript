@@ -7,9 +7,9 @@ let playAgain;
 function setPlayerChoice(button) {
     console.log(button);
 }
-const rock = document.querySelectorAll('#rock');
-const paper = document.querySelectorAll('#paper');
-const scissors = document.querySelectorAll('#scissors');
+const rock = document.querySelector('#rock')
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 
 rock.addEventListener('click', setPlayerChoice('rock'));
 paper.addEventListener('click', setPlayerChoice('paper'));
