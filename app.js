@@ -101,12 +101,19 @@ rock.addEventListener('click', () => {
     setUserChoice('ROCK');
     getComputerChoice();
     getResults();
+    displayWinner();
 })
 paper.addEventListener('click', () => {
     setUserChoice('PAPER');
+    getComputerChoice();
+    getResults();
+    displayWinner();
 })
 scissors.addEventListener('click', () => {
     setUserChoice('SCISSORS');
+    getComputerChoice();
+    getResults();
+    displayWinner();
 })
 
 
