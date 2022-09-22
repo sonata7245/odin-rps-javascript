@@ -1,7 +1,7 @@
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
-const reset = document.querySelector('#reset');
+const resetButton = document.querySelector('#reset');
 const resultsDisplay = document.querySelector('#results')
 const userScoreDisplay = document.querySelector('#playerScore')
 const computerScoreDisplay = document.querySelector('#computerScore')
@@ -134,7 +134,7 @@ scissors.addEventListener('click', () => {
     displayWinner();
 })
 
-reset.addEventListener('click', () => {
+resetButton.addEventListener('click', () => {
     reset();
 })
 
