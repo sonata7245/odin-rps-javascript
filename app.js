@@ -4,19 +4,23 @@
 //let playAgain;
 //get input from user
 
-//function setUserChoice (button) {
-//    console.log(button);
-//}
+function setUserChoice (button) {
+    console.log(button);
+}
 
 const rock = document.querySelector('#rock')
-//const paper = document.querySelector('#paper');
-//const scissors = document.querySelector('#scissors');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 
-rock.addEventListener('click', (e) => {
-    console.log(e);
+rock.addEventListener('click', () => {
+    setUserChoice('rock');
 })
-//paper.addEventListener('click', setUserChoice('paper'));
-//scissors.addEventListener('click', seUserChoice('scissors'));
+paper.addEventListener('click', () => {
+    setUserChoice('paper');
+})
+scissors.addEventListener('click', () => {
+    setUserChoice('scissors');
+})
 
 
 
