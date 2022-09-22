@@ -15,10 +15,10 @@ function getRandomInt(max) {
 function displayWinner() {
     //output who won
     if (winner == "user") {
-        console.log(`You chose ${userChoice} and the computer chose ${computerChoice}, You won!`)
+        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice}, You won!`
     }
     if (winner == "computer") {
-        console.log(`You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`)
+        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`
     }
 
     if (winner == "tie") {
