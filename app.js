@@ -4,7 +4,7 @@ let userChoice;
 //let playAgain;
 //get input from user
 
-function setUserChoice(button) {
+function setUserChoice (button) {
     console.log(button);
 }
 
