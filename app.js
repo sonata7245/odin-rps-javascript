@@ -11,12 +11,12 @@ console.log (dir.buttonClicked)
 
 
  //   getChoice();
-    console.log(userChoice);
+ //   console.log(userChoice);
     //have computer randomly choose rock paper scissors
  //   getComputerChoice();
-    console.log(computerChoice);
+ //   console.log(computerChoice);
  //   getResults()
-    console.log(winner);
+ //   console.log(winner);
 
     //output who won
     if (winner == "user") {
