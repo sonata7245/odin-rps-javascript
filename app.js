@@ -4,11 +4,16 @@ let winner;
 let playAgain;
 //get input from user
 
-const buttonClicked = document.querySelectorAll('button');
+function setPlayerChoice(button) {
+    console.log(button);
+}
+const rock = document.querySelectorAll('#rock');
+const paper = document.querySelectorAll('#paper');
+const scissors = document.querySelectorAll('#scissors');
 
-buttonClicked.addEventListener('click', function () {
-    console.log(buttonClicked);
-})
+rock.addEventListener('click', setPlayerChoice('rock'));
+paper.addEventListener('click', setPlayerChoice('paper'));
+scissors.addEventListener('click', setPlayerChoice('scissors'));
 
 
 
