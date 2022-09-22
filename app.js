@@ -1,19 +1,20 @@
 let userChoice;
-let computerChoice;
-let winner;
-let playAgain;
+//let computerChoice;
+//let winner;
+//let playAgain;
 //get input from user
 
-function setPlayerChoice(button) {
+function setUserChoice(button) {
     console.log(button);
 }
+
 const rock = document.querySelector('#rock')
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
-rock.addEventListener('click', setPlayerChoice('rock'));
-paper.addEventListener('click', setPlayerChoice('paper'));
-scissors.addEventListener('click', setPlayerChoice('scissors'));
+rock.addEventListener('click', setUserChoice('rock'));
+paper.addEventListener('click', setUserChoice('paper'));
+scissors.addEventListener('click', seUserChoice('scissors'));
 
 
 
@@ -27,106 +28,106 @@ scissors.addEventListener('click', setPlayerChoice('scissors'));
  //   getResults()
  //   console.log(winner);
 
-    //output who won
-    if (winner == "user") {
-        alert(`You chose ${userChoice} and the computer chose ${computerChoice}, You won!`)
-    }
+//     //output who won
+//     if (winner == "user") {
+//         alert(`You chose ${userChoice} and the computer chose ${computerChoice}, You won!`)
+//     }
 
-    if (winner == "computer") {
-        alert(`You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`)
-    }
+//     if (winner == "computer") {
+//         alert(`You chose ${userChoice} and the computer chose ${computerChoice},You lost, sorry!`)
+//     }
 
-    if (winner == "tie") {
-        alert(`You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`)
-    }
-
-
-//function to get input from user
-function getChoice() {
-    let keepGoing = true;
-    while (keepGoing) {
-        userChoice = prompt("Input Rock, Paper, or Scissors");
-        //make input all uppercase
-        userChoice = userChoice.toUpperCase();
+//     if (winner == "tie") {
+//         alert(`You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`)
+//     }
 
 
-        //make sure input is either Rock Paper or Scissors
-        if ((userChoice !== "ROCK") && (userChoice !== "PAPER") && (userChoice !== "SCISSORS")) {
-            alert("Your choice is invalid please try again");
+// //function to get input from user
+// function getChoice() {
+//     let keepGoing = true;
+//     while (keepGoing) {
+//         userChoice = prompt("Input Rock, Paper, or Scissors");
+//         //make input all uppercase
+//         userChoice = userChoice.toUpperCase();
 
 
-        }
-
-        else {
-            keepGoing = false;
-        }
-    }
-    return userChoice;
-}
+//         //make sure input is either Rock Paper or Scissors
+//         if ((userChoice !== "ROCK") && (userChoice !== "PAPER") && (userChoice !== "SCISSORS")) {
+//             alert("Your choice is invalid please try again");
 
 
+//         }
+
+//         else {
+//             keepGoing = false;
+//         }
+//     }
+//     return userChoice;
+// }
 
 
 
-//Computer makes choice
-function getComputerChoice() {
-    let choiceArray = ["ROCK", "PAPER", "SCISSORS"]
-    let compRandom = getRandomInt(3);
-    computerChoice = choiceArray[compRandom];
-    return computerChoice;
-}
-
-//random number generator
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
 
 
+// //Computer makes choice
+// function getComputerChoice() {
+//     let choiceArray = ["ROCK", "PAPER", "SCISSORS"]
+//     let compRandom = getRandomInt(3);
+//     computerChoice = choiceArray[compRandom];
+//     return computerChoice;
+// }
 
-//compare user input to computer
-//Rock > Scissor > Paper, Paper > Rock
-function getResults() {
-    if (userChoice == "ROCK") {
+// //random number generator
+// function getRandomInt(max) {
+//     return Math.floor(Math.random() * max);
+// }
 
-        if (computerChoice == "SCISSORS") {
-            winner = "user";
-        }
 
-        else if (computerChoice == "PAPER") {
-            winner = "computer";
-        }
-        else if (computerChoice == "ROCK") {
-            winner = "tie";
-        }
-    }
 
-    if (userChoice == "PAPER") {
+// //compare user input to computer
+// //Rock > Scissor > Paper, Paper > Rock
+// function getResults() {
+//     if (userChoice == "ROCK") {
 
-        if (computerChoice == "ROCK") {
-            winner = "user";
-        }
+//         if (computerChoice == "SCISSORS") {
+//             winner = "user";
+//         }
 
-        else if (computerChoice == "SCISSORS") {
-            winner = "computer";
-        }
-        else if (computerChoice == "PAPER") {
-            winner = "tie";
-        }
-    }
+//         else if (computerChoice == "PAPER") {
+//             winner = "computer";
+//         }
+//         else if (computerChoice == "ROCK") {
+//             winner = "tie";
+//         }
+//     }
 
-    if (userChoice == "SCISSORS") {
+//     if (userChoice == "PAPER") {
 
-        if (computerChoice == "PAPER") {
-            winner = "user";
-        }
+//         if (computerChoice == "ROCK") {
+//             winner = "user";
+//         }
 
-        else if (computerChoice == "ROCK") {
-            winner = "computer";
-        }
-        else if (computerChoice == "SCISSORS") {
-            winner = "tie";
-        }
-    }
-    return winner;
-}
+//         else if (computerChoice == "SCISSORS") {
+//             winner = "computer";
+//         }
+//         else if (computerChoice == "PAPER") {
+//             winner = "tie";
+//         }
+//     }
+
+//     if (userChoice == "SCISSORS") {
+
+//         if (computerChoice == "PAPER") {
+//             winner = "user";
+//         }
+
+//         else if (computerChoice == "ROCK") {
+//             winner = "computer";
+//         }
+//         else if (computerChoice == "SCISSORS") {
+//             winner = "tie";
+//         }
+//     }
+//     return winner;
+// }
 
