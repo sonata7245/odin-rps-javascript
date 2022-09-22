@@ -15,6 +15,9 @@ function reset() {
     userScoreDisplay.textContent = userScore;
     computerScoreDisplay.textContent = computerScore;
     resultsDisplay.textContent = "Make your Choice"
+    rock.disabled = false;
+    paper.disabled = false;
+    scissors.disabled = false;
 
 }
 
