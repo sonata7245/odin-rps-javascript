@@ -1,8 +1,7 @@
-//let userChoice;
-//let computerChoice;
-//let winner;
-//let playAgain;
-//get input from user
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+const resultsDisplay = document.querySelector('#results')
 
 function setUserChoice(choice) {
     return userChoice = choice;
@@ -23,7 +22,7 @@ function displayWinner() {
     }
 
     if (winner == "tie") {
-        console.log(`You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`)
+        resultsDisplay.textContent =`You chose ${userChoice} and the computer chose ${computerChoice}, What fate, its a tie!`
     }
 }
 
@@ -82,9 +81,7 @@ function getResults() {
 }
 
 
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
+
 
 rock.addEventListener('click', () => {
     setUserChoice('ROCK');
